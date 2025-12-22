@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Kandi IT Services</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    </head>
+    <body>
+        <header>
+            <div class="container nav" role="navigation" aria-label="Main navigation">
+                <div class="brand">
+                    <img src="logo1.png" alt="Kandi logo" class="mark" />
+                    <div class="brand-name">
+                        <div class="brand-title">Kandi IT Services</div>
+                        <div class="brand-tagline">Reliable software &amp; IT consulting</div>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a class="cta" href="#contact">Get Quote</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-toggle" aria-expanded="false" aria-controls="mobile-nav" id="mobileToggle">☰</button>
+            </div>
+            <div id="mobile-nav" class="mobile-nav container" hidden>
+                <div class="show-mobile">
+                    <a href="#home">Home</a>
+                </div>
+                <div class="show-mobile">
+                    <a href="#services">Services</a>
+                </div>
+                <div class="show-mobile">
+                    <a href="#about">About</a>
+                </div>
+                <div class="show-mobile">
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="home" class="hero">
+                <div class="container">
+                    <div class="hero-grid">
+                        <div>
+                            <h1>We build reliable software that accelerates growth</h1>
+                            <p>Trusted partner for web & mobile apps, custom software, cloud & IT consulting.</p>
+                            <div class="flex-gap mt-18">
+                                <a class="cta" href="#contact">Start a Project</a>
+                                <a href="#services" class="btn-outline">Explore Services</a>
+                            </div>
+                            <div class="cards mt-22">
+                                <div class="card">
+                                    <strong>99.9%</strong>
+                                    <div class="card-note">Uptime & reliable delivery</div>
+                                </div>
+                                <div class="card">
+                                    <strong>Custom</strong>
+                                    <div class="card-note">Solutions tailored to your needs</div>
+                                </div>
+                                <div class="card">
+                                    <strong>Support</strong>
+                                    <div class="card-note">Ongoing maintenance & consulting</div>
+                                </div>
+                            </div>
+                        </div>
+                        <aside class="card" aria-hidden="false">
+                            <h4 class="estimate-heading">Quick Project Estimate</h4>
+                            <p class="estimate-desc">Tell us the scope and we'll respond within one business day.</p>
+                            <form id="estimateForm">
+                                <input type="text" id="ename" placeholder="Your name" required />
+                                <input type="email" id="eemail" placeholder="Email address" required />
+                                <select id="etype">
+                                    <option>Website</option>
+                                    <option>Mobile app</option>
+                                    <option>Custom software</option>
+                                    <option>IT consulting</option>
+                                </select>
+                                <button type="submit" class="cta full-width mt-12">Request Estimate</button>
+                            </form>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="services">
+                <div class="container">
+                    <h2>Services</h2>
+                    <p class="muted mt-8">Full-stack engineering, cloud, and IT strategy to help you scale.</p>
+                    <div class="services-grid mt-18">
+                        <div class="card">
+                            <div class="service-icon">🌐</div>
+                            <h3>Web & Mobile Apps</h3>
+                            <p class="service-desc">Responsive frontends, robust backends, and smooth deployments.</p>
+                        </div>
+                        <div class="card">
+                            <div class="service-icon">⚙️</div>
+                            <h3>Custom Software</h3>
+                            <p class="service-desc">Tailored systems that automate workflows and reduce costs.</p>
+                        </div>
+                        <div class="card">
+                            <div class="service-icon">☁️</div>
+                            <h3>Cloud & DevOps</h3>
+                            <p class="service-desc">Cloud migration, DevOps pipelines, monitoring and scaling.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="about">
+                <div class="container">
+                    <h2>About Kandi IT Services</h2>
+                    <div class="about-grid">
+                        <div>
+                            <p class="muted">We are a small team of engineers and designers focused on building reliable, maintainable software for growing companies. Our approach mixes engineering discipline with practical business sense: rapid iteration, measurable outcomes, and sensible architecture.</p>
+                            <ul class="muted mt-12">
+                                <li>10+ years combined experience</li>
+                                <li>Delivery-focused agile process</li>
+                                <li>Security and maintainability prioritized</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <strong>Contact</strong>
+                            <div class="muted small mt-8">Email: hello@kandiit.example</div>
+                            <div class="muted small">Phone: +1 (555) 123-4567</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact">
+                <div class="container">
+                    <h2>Get in touch</h2>
+                    <p class="muted mt-8">Tell us about your project — we'll reply promptly.</p>
+                    <form id="contactForm" class="form-mt">
+                        <input type="text" id="name" placeholder="Full name" required />
+                        <input type="email" id="email" placeholder="Email address" required />
+                        <input type="text" id="company" placeholder="Company (optional)" />
+                        <textarea id="message" placeholder="How can we help you?" required></textarea>
+                        <div class="flex-row">
+                            <button type="submit" class="cta">Send Message</button>
+                            <a href="mailto:hello@kandiit.example" class="mail-link">Or email us directly</a>
+                        </div>
+                        <div id="formStatus" role="status" class="form-status"></div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container footer-row">
+                <div class="muted">© 2025 Kandi IT Services</div>
+                <div class="muted">Built with care · Privacy · Terms</div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

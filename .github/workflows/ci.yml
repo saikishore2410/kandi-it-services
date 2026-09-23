@@ -1,0 +1,23 @@
+name: Static Site CI
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required HTML entry point
+        shell: bash
+        run: test -f index.html
+      - name: Check HTML structure
+        shell: python
+        run: |
+          import html.parser
+          from pathlib import Path
+          class P(html.parser.HTMLParser): pass
+          p=P()
+          p.feed(Path("index.html").read_text(encoding="utf-8"))
+          p.close()
+          print("index.html parsed successfully")
